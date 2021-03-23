@@ -14,7 +14,7 @@ function Find_Intrest(params)
 	{
 		k=params[i]*k;
 	}
-return k;
+return k/100;
 }
 
 bot.on('message', msg => {
@@ -32,7 +32,7 @@ bot.on('message', msg => {
 	  const numArgs = args.map(x => parseFloat(x));
 	  if(numArgs.length==3){
 	  const sum = Find_Intrest(numArgs);
-	  msg.reply(`The Intrest you get is $${sum/100}!`);}
+	  msg.reply(`The Intrest you get is $${sum}!`);}
 	  else{
 		  msg.reply("You need to type !rules for reading rules of how to use bot");
 	  }
