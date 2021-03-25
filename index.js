@@ -41,6 +41,12 @@ bot.on('message', msg => {
 		msg.reply("This bot is used to calculate INTREST for your LOAN \r for finding intrest U need to type '!intrest<space>principal_amount<space>intrest%(per_year)<space>timespan(in years)' for getting ur monthly intrest\r u can also find latency using this bot, for knowing latency of bot type '!ping'");
 	}
 });
+var http = require('http');
 
+
+http.createServer(function (req, res) {
+  res.write('The Bot is Up'); 
+  res.end(); 
+}).listen(process.env.PORT);
 
 bot.login(TOKEN);
